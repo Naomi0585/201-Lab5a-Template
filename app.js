@@ -31,7 +31,6 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) { //eslint-disable-line
     const product = a * b;
     return [product, `The product of ${a} and ${b} is ${product}.`];
-
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -56,7 +55,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
     let totalProduct = multiply(multiply(a, b), c);
     return [
         totalSum
-        totalProduct,
+        const totalProduct = multiply(a, b); 
         a + " and " + b + " and " + c + " sum to" + totalSum + ".", "The product of " + a + " and " + b + " and " + c + " is " + totalProduct + " . " 
     ]; 
 
