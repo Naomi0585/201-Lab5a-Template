@@ -51,15 +51,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    let totalSum = sum(sum(a, b), c);
-    let totalProduct = multiply(multiply(a, b), c);
-    return [
-        totalSum
-        const totalProduct = multiply(a, b); 
-        a + " and " + b + " and " + c + " sum to" + totalSum + ".", "The product of " + a + " and " + b + " and " + c + " is " + totalProduct + " . " 
-    ]; 
+    // use your sum() function to add numbers
+    let totalSum = sum(sum(a, b)[0], c)[0]; // sum() returns [value, string], we need the number
 
+    // use your multiply() function to multiply numbers
+    let totalProduct = multiply(multiply(a, b)[0], c)[0]; // multiply() returns [value, string]
+
+    // return array as requested
+    return [
+        totalSum,
+        totalProduct,
+        `${a} and ${b} and ${c} sum to ${totalSum}.`,
+        `The product of ${a} and ${b} and ${c} is ${totalProduct}.`
+    ];
 }
+
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
